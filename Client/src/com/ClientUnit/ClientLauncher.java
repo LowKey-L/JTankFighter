@@ -8,4 +8,8 @@ package com.ClientUnit;
  * @date 2021/12/7 19:58
  **/
 public class ClientLauncher {
+
+    public static void main(String[] args) {
+
+    }
 }

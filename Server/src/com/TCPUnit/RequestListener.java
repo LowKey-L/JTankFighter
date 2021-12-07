@@ -1,5 +1,12 @@
 package com.TCPUnit;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.ServerSocket;
+import java.net.Socket;
+
 /**
  * <p>
  *
@@ -9,10 +16,27 @@ package com.TCPUnit;
  **/
 public class RequestListener {
 
-    private RequestType requestType;
-}
+    private static boolean isAvailable;
 
-enum RequestType {
+    private String partnerIp;
 
-    connect, addInQueue
+    public static void activeListener() {
+
+        try {
+            while (true) {
+                ServerSocket serverSocket = new ServerSocket(9999);
+                Socket socket = serverSocket.accept();
+                InputStream inputStream = socket.getInputStream();
+
+                BufferedReader bufferedReader =
+                        new BufferedReader(new InputStreamReader(inputStream));
+                String command = bufferedReader.readLine();
+
+                
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
