@@ -9,6 +9,7 @@ package com.TCPUnit;
  **/
 public class RequestSender {
 
+    private RequestType requestType;
 }
 
 enum RequestType {
