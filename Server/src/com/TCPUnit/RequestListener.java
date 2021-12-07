@@ -7,6 +7,6 @@ package com.TCPUnit;
  * @version 1.0
  * @date 2021/12/7 19:35
  **/
-public class RequestReceiver {
+public class RequestListener {
 
 }
