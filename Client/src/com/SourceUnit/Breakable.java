@@ -9,5 +9,5 @@ package com.SourceUnit;
  **/
 public interface Breakable {
 
-    void move();
+    void isWallDestroyed();
 }
